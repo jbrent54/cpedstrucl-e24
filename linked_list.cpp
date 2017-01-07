@@ -1,7 +1,5 @@
-#include <iostream>
 #include<stdio.h> 
 #include<stdlib.h>
-using namespace std;
 struct node {
 	int data;
 	struct node * next;
@@ -23,7 +21,7 @@ void search(int num) {
   n = head;
   while(n!=NULL){
     if(num== n->data)
-    cout<<"Found "<< n->data<<" at position "<<c; 
+    prinf("%d found in position %d",val,c);
      n = n->next;
      c++;
   }
@@ -190,10 +188,11 @@ int main() {
       	scanf("%d", & num);
       	search(num);
       case 6:
-      	prinf("Enter value:");
+      	printf("Enter a number to be added: ");
       	scanf("%d", &num);
-      	prinf("Add location:");
-      	scanf("d", &num);
+      	printf("Enter a specific location: ");
+      	scanf("%d", &loc);
+      	addafter(num,loc);
       	break;
       case 7:
       	
