@@ -56,7 +56,7 @@ int main(){
 	insertTreeNode(root,'7');
 	insertTreeNode(root,'8');
 	insertTreeNode(root,'9');
-	cout << "increasing sort order\n";
+	cout << "in order\n";
 	printTreeInOrder(root);
 	cout << endl;
 	cout << "post order \n";
