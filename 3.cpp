@@ -4,6 +4,7 @@ struct Tree{
 	char data;
 	Tree *left, *right, *parent;  
 };
+
 struct Tree *newTreeNode(int data){
 	Tree *node = new Tree;
 	node->data = data;
@@ -12,6 +13,7 @@ struct Tree *newTreeNode(int data){
 	node->parent = NULL;
 	return node;
 }
+
 struct Tree* insertTreeNode(struct Tree *node, int data){
 	static Tree *p;
 	Tree *retNode;
@@ -30,6 +32,7 @@ struct Tree* insertTreeNode(struct Tree *node, int data){
 	} 
 	return node;
 }
+
 void printTreeInOrder(struct Tree *node){
 	if(node == NULL) return;
 	printTreeInOrder(node->left);
@@ -42,13 +45,8 @@ void printTreePostOrder(struct Tree *node){
 	printTreePostOrder(node->right);
 	cout << node->data << " ";
 }
+
 int main(int argc, char **argv){
-	char ch, ch1, ch2;
-	Tree *found;
-	Tree *succ;
-	Tree *pred;
-	Tree *ancestor;
-	char charArr[9] = {'A','B','C','D','E','F','G','H','I'};
 	Tree *root = newTreeNode('1');
 	insertTreeNode(root,'2');
 	insertTreeNode(root,'3');
